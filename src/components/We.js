@@ -61,10 +61,39 @@ const WeSesction = styled.section`
   
   // ADAPTIVE
   @media (max-width: 768px){
-    
+    padding: 45px 0 30px;
+    .title{
+      font-size: 52px;
+      margin-bottom: 40px;
+    }
+    .description{
+      font-size: 16px;
+    }
+    .advantage{
+      font-size: 28px;
+    }
+    .imgWrapper{
+      width: 42px;
+    }
+    .picsis{
+      display: none;
+    }
   }
   @media (max-width: 375px){
-    
+    padding: 32px 0 25px;
+    .title{
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .description{
+      font-size: 14px;
+    }
+    .advantage{
+      font-size: 24px;
+    }
+    .imgWrapper{
+      width: 39px;
+    }
   }
   
 `

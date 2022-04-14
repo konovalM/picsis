@@ -55,6 +55,84 @@ const RecommendSection = styled.section`
     line-height: 22px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: .3s;
+  }
+  .btn:hover, .btn:active{
+    background-color: #D01262;
+  }
+  
+  //ADAPTIVE
+  
+  @media (max-width: 1213px){
+    .gridWrapper{
+      justify-content: center;
+      grid-template-columns: repeat(2, 277px);
+      grid-template-rows: 560px;
+      grid-auto-flow: row;
+      grid-auto-rows: 560px;
+    }
+    .gridItem:last-child{
+      grid-column: 1 / 3;
+      order: -1;
+    }
+    .gridItem:nth-child(1){
+      order: -3;
+    }
+    .gridItem:nth-child(2){
+      order: -2;
+    }
+    .gridItem:nth-child(3){
+      order: -2;
+    }
+  }
+  @media (max-width: 768px){
+    padding: 30px 0 30px;
+    .title{
+      font-size: 52px;
+      margin-bottom: 40px;
+    }
+    .gridWrapper{
+      grid-column-gap: 15px;
+      grid-template-columns: 200px 200px;
+      grid-template-rows: auto;
+      grid-auto-rows: auto;
+    }
+    .text{
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn{
+      margin-bottom: 80px;
+      width: 150px;
+      height: 44px;
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 470px){
+    padding: 30px 0 30px;
+    .title{
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .gridWrapper{
+      grid-row-gap: 13px;
+      grid-column-gap: 13px;
+      grid-template-columns: 151px 151px;
+      grid-template-rows: auto;
+      grid-auto-rows: auto;
+    }
+    .text{
+      font-size: 15px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .btn{
+      margin-bottom: 64px;
+      width: 134px;
+      height: 41px;
+      font-size: 16px;
+    }
+    
   }
 `
 

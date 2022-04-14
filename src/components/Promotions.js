@@ -6,10 +6,11 @@ const PromotionsTag = styled.section`
   padding: 100px 0 50px;
   .gridWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-template-rows: minmax(226px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(435px, 1fr));
+    grid-template-rows: auto;
     grid-column-gap: 20px;
     grid-row-gap: 15px;
+    grid-auto-rows: auto;
   }
   .inner{
     background: #EC297B;
@@ -55,6 +56,7 @@ const PromotionsTag = styled.section`
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+    margin-bottom: 49px;
   }
   .innerFirst{
     position: relative;
@@ -68,6 +70,87 @@ const PromotionsTag = styled.section`
     right: -10px;
     top: -54px;
   }
+  
+  // ADAPTIVE
+  
+  @media(max-width: 768px){
+    padding: 40px 0 40px;
+    
+    .text{
+      font-size: 55px;
+      line-height: 65px;
+      margin: 30px 0 9px;
+    }
+    .textFlex{
+      margin: 30px 0 9px;
+      font-size: 60px;
+      line-height: 65px;
+    }
+    .descr{
+      font-size: 17px;
+      line-height: 20px;
+    }
+    .innerFirst:after {
+      width: 90px;
+      height: 90px;
+      right: -5px;
+      top: -35px;
+    }
+  }
+  @media(max-width: 450px){
+    .gridWrapper{
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+    .inner{
+      border-radius: 17px;
+    }
+  }
+  @media(max-width: 425px){
+    padding: 20px 0 40px;
+    .descr{
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .text{
+      font-size: 45px;
+      line-height: 51px;
+      margin: 20px auto 5px;
+    }
+    .descr{
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 19px;
+    }
+    .innerFirst:after {
+      width: 60px;
+      height: 60px;
+      right: -12px;
+      top: -33px;
+    }
+    .textFlex{
+      margin: 20px 0 5px;
+      font-size: 45px;
+      line-height: 51px;
+    }
+  }
+  
+  @media(max-width: 350px){
+    padding: 20px 0 40px;
+    .descr{
+      font-size: 12px;
+      line-height: 14px;
+    }
+    .text{
+      font-size: 39px;
+      line-height: 51px;
+    }
+    .descr{
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 17px;
+    }
+  }
+  
 `
 
 const Promotions = () => {

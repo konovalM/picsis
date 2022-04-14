@@ -32,12 +32,13 @@ const DeliverySection = styled.section`
   }
   th{
     font-weight: 300;
-    padding: 23px 23px 19px 23px;
+    height: 71px;
     font-size: 24px;
     line-height: 29px;
     color: #fff;
     background: #EC297B;
     text-align: left;
+    padding-left: 23px;
     box-shadow: -1px -1px 0px 0px #000;
   }
   .tr{
@@ -56,7 +57,8 @@ const DeliverySection = styled.section`
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    padding: 20px 20px 12px 24px;
+    padding-left: 23px;
+    height: 57px;
     box-shadow: -1px 0px 0px #000;
   }
   .lastCorner{
@@ -66,8 +68,60 @@ const DeliverySection = styled.section`
   tbody{
     tr:last-child{
       td{
-        padding-bottom: 28px;
+        height: 67px;
       }
+    }
+  }
+  
+  
+  //ADAPTIVE
+  
+  @media(max-width: 768px){
+    padding: 40px 0  50px;
+    .title{
+      font-size: 50px;
+    }
+    .pink, .text{
+      font-size: 18px;
+    }
+    .pink, .text{
+      margin-bottom: 20px;
+    }
+    th, .tdBody{
+      font-size: 18px;
+    }
+    th{
+      min-height: 55px;
+      padding-left: 17px;
+    }
+    .tdBody{
+      padding-left: 17px;
+      height: 40px;
+    }
+
+  }
+  @media(max-width: 495px){
+    th{
+      padding-left: 11px;
+    }
+    th:first-child{
+      width: 125px;
+    }
+    th, .tdBody{
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  @media(max-width: 425px){
+    padding: 30px 0 50px;
+    .title{
+      font-size: 50px;
+    }
+    .pink, .text{
+      font-size: 14px;
+    }
+    .pink{
+      margin-bottom: 10px;
     }
   }
 `

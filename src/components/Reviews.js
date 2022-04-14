@@ -14,6 +14,24 @@ const ReviewsTag = styled.section`
   .container{
     overflow: hidden;
   }
+  
+  // ADAPTIVE
+  @media (max-width: 768px){
+    padding: 20px 0;
+    .title{
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+  }
+  
+  @media (max-width: 425px){
+    padding: 10px 0;
+    .title{
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 20px;
+    }
+  }
 `
 
 const Reviews = () => {
